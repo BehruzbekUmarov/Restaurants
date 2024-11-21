@@ -3,3 +3,23 @@
 GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
+
+@id=4
+GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+
+###
+
+POST {{Restaurants.API_HostAddress}}/api/restaurants
+Content-Type: application/json
+
+{
+  "Name": "Butqa",
+  "Description": "Bu butqani odamla yeyolmaydi",
+  "Category": "Rasvo",
+  "HasDelivery": true,
+  "ContactEmail": "bekhruzbek@example.com",
+  "ContactNumber": "93-221-51-18",
+  "City": "Shahrisabz",
+  "Street": "Yuksalish 174",
+  "PostalCode": "87654"
+}
