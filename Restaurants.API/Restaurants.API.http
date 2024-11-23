@@ -4,8 +4,13 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=4
+@id=2
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+
+###
+
+@id=64
+Delete {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
 
@@ -13,13 +18,30 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-  "Name": "Butqa",
+  "Name": "chanyu yunka",
   "Description": "Bu butqani odamla yeyolmaydi",
-  "Category": "Rasvo",
+  "Category": "sfADSF",
   "HasDelivery": true,
   "ContactEmail": "bekhruzbek@example.com",
   "ContactNumber": "93-221-51-18",
   "City": "Shahrisabz",
   "Street": "Yuksalish 174",
-  "PostalCode": "87654"
+  "PostalCode": "87-654"
+}
+###
+
+@id = 5
+PUT {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+Content-Type: application/json
+
+{
+  "Name": "chanyu yunka",
+  "Description": "Bu butqani odamla yeyolmaydi",
+  "Category": "sfADSF",
+  "HasDelivery": true,
+  "ContactEmail": "bekhruzbek@example.com",
+  "ContactNumber": "93-221-51-18",
+  "City": "Shahrisabz",
+  "Street": "Yuksalish 174",
+  "PostalCode": "87-654"
 }
