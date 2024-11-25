@@ -29,15 +29,10 @@ internal class RestaurantRepository(RestaurantsDbContext dbContext) : IRestauran
     public async Task<Restaurant?> GetByIdAsync(int id)
     {
         return await dbContext.Restaurants
-            .AsNoTracking()
             .Include(r => r.Dishes)
             .FirstOrDefaultAsync(x => x.Id == id);
     }
 
-    public async Task<int> Update(Restaurant entity)
-    {
-        dbContext.Update(entity);
-        await dbContext.SaveChangesAsync();
-        return entity.Id;
-    }
+    public async Task SaveChanges()
+        => await dbContext.SaveChangesAsync();
 }

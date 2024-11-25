@@ -4,7 +4,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=2
+@id=5
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
@@ -18,8 +18,8 @@ POST {{Restaurants.API_HostAddress}}/api/restaurants
 Content-Type: application/json
 
 {
-  "Name": "chanyu yunka",
-  "Description": "Bu butqani odamla yeyolmaydi",
+  "Name": "Laiziz",
+  "Description": "Unverda uqiydi",
   "Category": "sfADSF",
   "HasDelivery": true,
   "ContactEmail": "bekhruzbek@example.com",
@@ -30,18 +30,12 @@ Content-Type: application/json
 }
 ###
 
-@id = 5
-PUT {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+@id = 8
+PATCH {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 Content-Type: application/json
 
 {
-  "Name": "chanyu yunka",
-  "Description": "Bu butqani odamla yeyolmaydi",
-  "Category": "sfADSF",
-  "HasDelivery": true,
-  "ContactEmail": "bekhruzbek@example.com",
-  "ContactNumber": "93-221-51-18",
-  "City": "Shahrisabz",
-  "Street": "Yuksalish 174",
-  "PostalCode": "87-654"
+  "Name": "Sunnat",
+  "Description": "Tatuda uqiydi",
+  "HasDelivery": false
 }

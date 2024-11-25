@@ -49,13 +49,14 @@ public class RestaurantsController(IMediator mediator) : ControllerBase
         return CreatedAtAction(nameof(GetById), new { id }, null);
     }
 
-    [HttpPut("{id}")]
+    [HttpPatch("{id}")]
     public async Task<IActionResult> UpdateRestaurant(UpdateRestaurantCommand command, [FromRoute] int id)
     {
         command.Id = id;
-        var result = await mediator.Send(command);
-        if (result == 0) return NotFound();
+        var isUpdated = await mediator.Send(command);
+        if(isUpdated)
+            return NoContent();
 
-        return Ok(result);
+        return NotFound();
     }
 }
