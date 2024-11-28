@@ -1,10 +1,22 @@
 @Restaurants.API_HostAddress = https://localhost:7080
 
-GET {{Restaurants.API_HostAddress}}/api/restaurants
+@restaurantId=1
+DELETE {{Restaurants.API_HostAddress}}/api/restaurants/{{restaurantId}}/dishes
 
 ###
 
-@id=3
-GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
+POST {{Restaurants.API_HostAddress}}/api/restaurants/2/dishes
+Content-Type: application/json
+
+{
+  "Name": "Behruz",
+  "Description": "bu behruzb",
+  "Price": 45,
+  "KiloKalories": 456
+}
+
+###
+
+GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
