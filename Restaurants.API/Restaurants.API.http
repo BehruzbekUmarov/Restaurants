@@ -4,38 +4,7 @@ GET {{Restaurants.API_HostAddress}}/api/restaurants
 
 ###
 
-@id=5
+@id=3
 GET {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
 
 ###
-
-@id=64
-Delete {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
-
-###
-
-POST {{Restaurants.API_HostAddress}}/api/restaurants
-Content-Type: application/json
-
-{
-  "Name": "Laiziz",
-  "Description": "Unverda uqiydi",
-  "Category": "sfADSF",
-  "HasDelivery": true,
-  "ContactEmail": "bekhruzbek@example.com",
-  "ContactNumber": "93-221-51-18",
-  "City": "Shahrisabz",
-  "Street": "Yuksalish 174",
-  "PostalCode": "87-654"
-}
-###
-
-@id = 8
-PATCH {{Restaurants.API_HostAddress}}/api/restaurants/{{id}}
-Content-Type: application/json
-
-{
-  "Name": "Sunnat",
-  "Description": "Tatuda uqiydi",
-  "HasDelivery": false
-}
